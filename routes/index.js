@@ -26,10 +26,10 @@ router.post('/', function(req, res) {
   console.log(req.body);
 
   vm.runInNewContext(req.body, context);
-    context.run().then( function(raw) {
-        // res.render('index', { title: raw });
-        res.send(raw);
-    })
+  context.run().then( function(raw) {
+    // res.render('index', { title: raw });
+    res.send(raw);
+  })
 });
 
 module.exports = router;
